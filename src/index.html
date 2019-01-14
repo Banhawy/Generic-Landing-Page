@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Generic Landing Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/css/styles.css" />
 </head>
 
@@ -16,20 +18,53 @@
         </div>
         <nav id="nav-bar">
             <ul>
-                <li><a href="#main" class="nav-link">About</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#video" class="nav-link">How It Works</a></li>
+                <li>
+                    <i class="fas fa-anchor"></i>
+                    <a href="#main" class="nav-link">About</a>
+                </li>
+                <li>
+                    <i class="fas fa-anchor"></i>
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li>
+                    <i class="fas fa-anchor"></i>
+                    <a href="#video" class="nav-link">How It Works</a>
+                </li>
             </ul>
         </nav>
     </header>
     <section id="main">
         <div class="main-text">
             <h1>Welcome To Rent-A-Yacht</h1>
-            <form id="form"><input id="email" type="email" placeholder="Enter email to recieve updates"><input id="submit"
-                    type="submit" value="submit"></form>
+            <form id="form">
+                <input id="email" type="email" placeholder="Enter email to recieve updates">
+                <input id="submit" type="submit" value="submit"></form>
         </div>
     </section>
     <section id="features">
+        <h1>Luxury Amenities</h1>
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-users fa-7x"></i>
+                <h2>Fully Staffed</h2>
+                <p>Experienced Friendly Staff</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-life-ring fa-7x"></i>
+                <h2>Life Guards 24/7</h2>
+                <p>On-duty Life Guards always nearby</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-glass-martini fa-7x"></i>
+                <h2>Open Bar</h2>
+                <p>Exquisite Drinks Served Onboard</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-wifi fa-7x"></i>
+                <h2>Free Wifi</h2>
+                <p>Free and Fast Wifi</p>
+            </div>
+        </div>
     </section>
     <section id="video"></section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
