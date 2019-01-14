@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var useref = require('gulp-useref');
 var cssnano = require('gulp-cssnano');
 var runSequence = require('run-sequence');
+// sass.compiler = require('node-sass');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -16,26 +17,32 @@ gulp.task('hello', function() {
 
 // Start browserSync server
 gulp.task('browserSync', function() {
-    browserSync({
+    browserSync.init({
         server: {
-            baseDir: 'src'
+            baseDir: './src'
         }
     })
+    gulp.watch('src/styles/sass/*.scss', ['sass']).on('change', function () {
+        browserSync.reload();
+    });
+    gulp.watch('src/*.html').on('change', function () {
+        browserSync.reload();
+    });
 })
 
 gulp.task('sass', function() {
     return gulp.src('src/styles/sass/**/*.scss') // Gets all files ending with .scss in src/scss and children dirs
         .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
         .pipe(gulp.dest('src/styles/css')) // Outputs it in the css folder
-        .pipe(browserSync.reload({ // Reloading with Browser Sync
-            stream: true
-        }));
+        // .pipe(browserSync.reload({ // Reloading with Browser Sync
+        //     stream: true
+        // }));
 })
 
 // Watchers
 gulp.task('watch', function() {
     gulp.watch('src//styles/sass/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.html', browserSync.reload);
+    gulp.watch('src/**/*.html', browserSync.reload());
     gulp.watch('src/js/**/*.js', browserSync.reload);
 })
 
@@ -54,12 +61,13 @@ gulp.task('useref', function() {
 
 // Build Sequences
 // ---------------
+gulp.task('default', ['browserSync']);
 
-gulp.task('default', function(callback) {
-    runSequence(['hello', 'sass', 'browserSync'], 'watch',
-        callback
-    )
-})
+// gulp.task('default', function(callback) {
+//     runSequence(['hello', 'sass', 'browserSync'], 'watch',
+//         callback
+//     )
+// })
 
 gulp.task('build', function(callback) {
     runSequence(
