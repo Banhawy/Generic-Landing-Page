@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+$main-font: 'Lobster',
+cursive;
+$navbar-offset: 20vh;
+
 body {
     width: 100%;
     margin: 0;
@@ -71,6 +76,12 @@ header {
         flex-direction: column;
         justify-content: center;
 
+        h1 {
+            font-size: 5rem;
+            color: rgba(255, 123, 0, 1);
+            font-family: $main-font;
+        }
+
         form {
             display: flex;
             justify-content: space-around;
@@ -84,6 +95,31 @@ header {
 
 #features {
     height: 50vh;
+
+    h1 {
+        padding-top: $navbar-offset;
+        display: block;
+        text-align: center;
+        font-family: $main-font;
+        font-size: 5rem;
+    }
+
+    .container {
+        padding-top: $navbar-offset - 5;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        flex-wrap: wrap;
+        background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0,
+            radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0,
+            radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48B;
+        background-size: 110px 200px;
+        background-repeat: repeat-x;
+
+        .feature {
+            text-align: center;
+        }
+    }
 }
 
 #video {
