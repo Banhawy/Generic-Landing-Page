@@ -1,3 +1,91 @@
-h1{
-    color: green;
+body {
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    min-height: 10vh;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: hsla(360, 100%, 100%, 0.84);
+    overflow: auto;
+
+    .logo {
+        width: 60%;
+
+        img {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            max-width: 10vw;
+        }
+    }
+
+    #nav-bar {
+
+        ul {
+            list-style: none;
+            display: flex;
+            width: 35vw;
+            justify-content: space-around;
+
+            li {
+                padding: 1.5rem;
+
+                &:hover {
+                    -webkit-box-shadow: inset 0px 0px 23px -4px rgba(4, 17, 20, 1);
+                    -moz-box-shadow: inset 0px 0px 23px -4px rgba(4, 17, 20, 1);
+                    box-shadow: inset 0px 0px 23px -4px rgba(4, 17, 20, 1);
+                }
+
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+
+
+                &:visited {
+                    text-decoration: none;
+                }
+
+
+            }
+        }
+    }
+
+}
+
+#main {
+    background: url('../../assets/svg/deep-blue.svg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        form {
+            display: flex;
+            justify-content: space-around;
+
+            input[type="email"] {
+                width: 60%;
+            }
+        }
+    }
+}
+
+#features {
+    height: 50vh;
+}
+
+#video {
+    height: 50vh;
 }
