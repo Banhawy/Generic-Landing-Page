@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+body {
+  width: 100%;
+  margin: 0; }
+
+header {
+  min-height: 10vh;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.84);
+  overflow: auto; }
+  header .logo {
+    width: 60%; }
+    @media screen and (max-width: 1127px) {
+      header .logo {
+        width: 40%; } }
+    @media screen and (max-width: 745px) {
+      header .logo {
+        width: 10%; } }
+    header .logo img {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      max-width: 10vw; }
+  header #nav-bar ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+    header #nav-bar ul li {
+      padding: 1.5rem; }
+      header #nav-bar ul li:hover {
+        -webkit-box-shadow: inset 0px 0px 23px -4px #041114;
+        -moz-box-shadow: inset 0px 0px 23px -4px #041114;
+        box-shadow: inset 0px 0px 23px -4px #041114; }
+    header #nav-bar ul a {
+      color: black;
+      text-decoration: none; }
+      header #nav-bar ul a:visited {
+        text-decoration: none; }
+
+#main {
+  background: url("../../assets/svg/deep-blue.svg");
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+  #main .main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #main .main-text h1 {
+      font-size: 5rem;
+      color: #ff7b00;
+      font-family: "Lobster", cursive; }
+    #main .main-text form {
+      display: flex;
+      justify-content: space-around; }
+      #main .main-text form input[type="email"] {
+        width: 60%; }
+
+.container {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: wrap; }
+  .container .feature {
+    text-align: center; }
+
+.waves {
+  height: 34vh;
+  background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48B;
+  background-size: 110px 200px;
+  background-repeat: repeat-x; }
+
+#features {
+  height: 100vh; }
+  #features h1 {
+    padding-top: 20vh;
+    display: block;
+    text-align: center;
+    font-family: "Lobster", cursive;
+    font-size: 5rem; }
+
+#how-it-works {
+  height: 65vh; }
+  #how-it-works h1 {
+    padding-top: 20vh;
+    display: block;
+    text-align: center;
+    font-family: "Lobster", cursive;
+    font-size: 5rem; }
+
+footer {
+  margin-top: 5rem; }
