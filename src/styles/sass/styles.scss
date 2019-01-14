@@ -21,6 +21,14 @@ header {
     .logo {
         width: 60%;
 
+        @media screen and (max-width: 1127px) {
+            width: 40%
+        }
+
+        @media screen and (max-width: 745px) {
+            width: 10%
+        }
+
         img {
             display: flex;
             justify-content: center;
@@ -35,7 +43,7 @@ header {
         ul {
             list-style: none;
             display: flex;
-            width: 35vw;
+            width: 100%;
             justify-content: space-around;
 
             li {
@@ -93,8 +101,29 @@ header {
     }
 }
 
+.container {
+    margin-top: $navbar-offset - 5;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+
+    .feature {
+        text-align: center;
+    }
+}
+
+.waves {
+    height: 34vh;
+    background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0,
+        radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0,
+        radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48B;
+    background-size: 110px 200px;
+    background-repeat: repeat-x;
+}
+
 #features {
-    height: 50vh;
+    height: 100vh;
 
     h1 {
         padding-top: $navbar-offset;
@@ -104,24 +133,22 @@ header {
         font-size: 5rem;
     }
 
-    .container {
-        padding-top: $navbar-offset - 5;
-        display: flex;
-        justify-content: space-around;
-        justify-items: center;
-        flex-wrap: wrap;
-        background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0,
-            radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0,
-            radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48B;
-        background-size: 110px 200px;
-        background-repeat: repeat-x;
 
-        .feature {
-            text-align: center;
-        }
-    }
 }
 
-#video {
-    height: 50vh;
+#how-it-works {
+    height: 65vh;
+
+    h1 {
+        padding-top: $navbar-offset;
+        display: block;
+        text-align: center;
+        font-family: $main-font;
+        font-size: 5rem;
+    }
+
+}
+
+footer {
+    margin-top: 5rem;
 }
